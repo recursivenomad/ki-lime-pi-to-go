@@ -1,7 +1,9 @@
 **A comprehensive KiCad Library for the Raspberry Pi Pico** 🥧
 ==============================================================
 
-### Providing footprints, symbols, and models for the module in its various forms and implementations
+### Providing footprints, symbols, & models for the module's various forms & implementations
+
+> *This git submodule only contains the finished library.  For source files and commit history, see [Ki-Lime Pi Pico][URL-Repository]*.
 
 
 
@@ -21,23 +23,27 @@
 
 
 
-***How do I use this library?***
-================================
+***How do I use this library as a git submodule?***
+===================================================
+
+> *If you're looking to use this library without submodules, you probably want the source repository [Ki-Lime Pi Pico][URL-Repository].*
 
 - Ensure you are running KiCad 7.0 or later
-- If not already created, create a new KiCad project
-- Move the root library directory `RaspberryPi_Pico/` to a folder anywhere within your KiCad project
-  > *If using the library globally, move `RaspberryPi_Pico/` to a globally accessible location*
+- Identify the path where you want this library to live in your project  
+  *(below, I will use `<GIT-ROOT>/pcb/project-libraries/RaspberryPi_Pico`)*
+- From within your git repository, call:
+  - `git submodule add --name ki-lime-pi-pico https://github.com/recursivenomad/ki-lime-pi-to-go.git pcb/project-libraries/RaspberryPi_Pico`  
+    *(Adjusting these parameters as you see fit)*
+  - `cd pcb/project-libraries/RaspberryPi_Pico`
+  - `git checkout 1.1.0`
 - Open the relevant KiCad project
 - Select `Preferences > Manage Footprint Libraries...`
 - Select the `Project Specific Libraries` tab
-  > *If using the library globally, select the `Global Librarires` tab instead*
 - Click the folder icon in the lower left to `Add Existing`
 - Navigate to and select `.../RaspberryPi_Pico/Module_RaspberryPi_Pico.pretty/`
 - Click `OK`
 - Select `Preferences > Manage Symbol Libraries...`
 - Select the `Project Specific Libraries` tab
-  > *If using the library globally, select the `Global Libaries` tab instead*
 - Click the folder icon in the lower left to `Add existing library to table`
 - Navigate to and select `.../RaspberryPi_Pico/MCU_Module_RaspberryPi_Pico.kicad_sym`
 - Click `OK`
@@ -51,7 +57,7 @@ To use, simply add a symbol to your schematic as you would any other; symbols sh
 ***Further reading***
 =====================
 
-Further reading available at the online repository linked below.
+*Further reading available in the [source repository][URL-Repository].*
 
 
 
@@ -59,7 +65,7 @@ Further reading available at the online repository linked below.
 ======================
 
 This work is made freely available under the [*MIT-0*][URL-MIT-0] license, rendered in [`LICENSE.txt`](./LICENSE.txt).  
-Although attribution is not required, sharing when you've made something with my work is really cool ❤✨
+Although attribution is not required, sharing when you've made something with my work is really cool 💖
 
 *No additional/conflicting permissions were present in this repository at the time of release.*
 
@@ -67,6 +73,7 @@ Although attribution is not required, sharing when you've made something with my
 
 *Repository: <https://gitlab.com/recursivenomad/ki-lime-pi-pico/>*  
 *Releases: <https://gitlab.com/recursivenomad/ki-lime-pi-pico/-/releases/>*  
+*Submodule: <https://github.com/recursivenomad/ki-lime-pi-to-go//>*  
 *Contact: <recursivenomad@protonmail.com>*
 
 ----------------------
@@ -77,10 +84,13 @@ Although attribution is not required, sharing when you've made something with my
 
 *Accepted, but not expected*
 
-Monero (XMR) - `8Bhyeo232EVDiK7aRSzHGRC28RZ1H6FL55V6CVyCVtxdDRQXHk8btPU8Wr5G8K3AWgaK19JfYbshKfHWqc177jwtCtCSaz1`  
-Ether (ETH) - `0xD1b824f2Ec3D609e816B04A301124129602A5238`  
-Bitcoin (BTC) - `bc1qadq5kyuuc7etgu5ywlygnaepqhzgc2u7gxkze2`  
-Online payment: <https://donate.stripe.com/dR6dSU1PueevgKY4gs>
+> Online payment: <https://donate.stripe.com/dR6dSU1PueevgKY4gs>
+
+> Monero (XMR): `8Bhyeo232EVDiK7aRSzHGRC28RZ1H6FL55V6CVyCVtxdDRQXHk8btPU8Wr5G8K3AWgaK19JfYbshKfHWqc177jwtCtCSaz1`
+
+> Ether (ETH): `0xD1b824f2Ec3D609e816B04A301124129602A5238`
+
+> Bitcoin (BTC): `bc1qadq5kyuuc7etgu5ywlygnaepqhzgc2u7gxkze2`
 
 
 
@@ -88,6 +98,8 @@ Online payment: <https://donate.stripe.com/dR6dSU1PueevgKY4gs>
 
 
 [URL-MIT-0]: <https://opensource.org/license/mit-0/>
+
+[URL-Repository]: <https://gitlab.com/recursivenomad/ki-lime-pi-pico/>
 
 [URL-KiCad-Forums-cdwilson]: <https://forum.kicad.info/t/21104>
 [URL-KiCad-Forums-mgyger]: <https://forum.kicad.info/t/35844/12>
