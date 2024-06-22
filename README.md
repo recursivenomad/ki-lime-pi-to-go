@@ -10,7 +10,7 @@
 ***Features***
 ==============
 
-- **KiCad 7.0 support**
+- **KiCad 8.0 support** *(For KiCad 7.0 support, checkout tag `1.1.0`)*
 - **Schematics with alternate pin definitions** to select more specific behaviours for each GPIO, as well as specify power directionality
 - **Generic and specific footprints** for the Pico and Pico W
   - Through-hole and surface-mount footprints with and without mounting holes
@@ -35,7 +35,7 @@
   - `git submodule add --name ki-lime-pi-pico https://github.com/recursivenomad/ki-lime-pi-to-go.git pcb/project-libraries/RaspberryPi_Pico`  
     *(Adjusting these parameters as you see fit)*
   - `cd pcb/project-libraries/RaspberryPi_Pico`
-  - `git checkout 1.1.0`
+  - `git checkout 2.0.0` *(For KiCad 7.0 support, checkout `1.1.0` instead)*
 - Open the relevant KiCad project
 - Select `Preferences > Manage Footprint Libraries...`
 - Select the `Project Specific Libraries` tab
@@ -73,7 +73,7 @@ Although attribution is not required, sharing when you've made something with my
 
 *Repository: <https://gitlab.com/recursivenomad/ki-lime-pi-pico/>*  
 *Releases: <https://gitlab.com/recursivenomad/ki-lime-pi-pico/-/releases/>*  
-*Submodule: <https://github.com/recursivenomad/ki-lime-pi-to-go//>*  
+*Submodule: <https://github.com/recursivenomad/ki-lime-pi-to-go/>*  
 *Contact: <recursivenomad@protonmail.com>*
 
 ----------------------
