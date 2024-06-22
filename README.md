@@ -1,12 +1,8 @@
-## [**Download the latest release**](https://gitlab.com/recursivenomad/ki-lime-pi-pico/-/releases/)
-
-
 **A comprehensive KiCad Library for the Raspberry Pi Pico** 🥧
-====================================================================
+==============================================================
 
 ### Providing footprints, symbols, and models for the module in its various forms and implementations
 
-&nbsp;
 
 
 ***Features***
@@ -19,18 +15,16 @@
   - Hand-solderable test points (ie. USB signals) in footprints with underside castellations
   - Optional pin labels as an add-on footprint
   - Optional keepout zone for 2.4 GHz RF on shared footprints
+  - Ability to add individual schematic symbols for sockets, and a virtual Pico for the BOM and rendering
 - **Diverse 3D models** for surface-mount, through-hole, and socketed forms of the Pico, Pico H, Pico W, and Pico WH using photorealistic materials
-- Majority adherence to the [KiCad Library Conventions](https://klc.kicad.org/) version 3.0.34
+- Majority adherence to the [KiCad Library Conventions][URL-KLC] version 3.0.41
 
-&nbsp;
 
 
 ***How do I use this library?***
 ================================
 
 - Ensure you are running KiCad 7.0 or later
-- Download the most recent [release](https://gitlab.com/recursivenomad/ki-lime-pi-pico/-/releases/) of the library
-- Unzip the file contents
 - If not already created, create a new KiCad project
 - Move the root library directory `RaspberryPi_Pico/` to a folder anywhere within your KiCad project
   > *If using the library globally, move `RaspberryPi_Pico/` to a globally accessible location*
@@ -50,57 +44,52 @@
 
 To use, simply add a symbol to your schematic as you would any other; symbols should be located under the section `MCU_Module_RaspberryPi_Pico`, and footprints under `Module_RaspberryPi_Pico`.
 
-### **You're all set to design exciting new circuit boards using the Raspberry Pi Pico! 🎉**
+**You're all set to design exciting new circuit boards using the Raspberry Pi Pico! 🎉**
 
-&nbsp;
 
 
 ***Further reading***
 =====================
 
-## Other KiCad implementations of the Raspberry Pi Pico:
-
-*Some adjacent solutions I encountered during my research for this project*
-
-- Official Raspberry Pi KiCad library files for the Pico and Pico W provided in
-  [Hardware design with the RP2040, Section 3](https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf#page=15)
-    - https://datasheets.raspberrypi.com/rp2040/VGA-KiCAD.zip
-    - https://datasheets.raspberrypi.com/rp2040/VGA-PicoW-KiCAD.zip
-- A detailed SketchUp model of the surface-mount Pico incorporating the above
-  Pico library
-  - https://github.com/ncarandini/KiCad-RP-Pico
-- A similarly versatile library found on the [KiCad forums](https://forum.kicad.info/t/are-there-pi-pico-library-files-available-for-kicad-6/35844/12)
-  for all the Pico variants, including a castellated *add-on board* footprint
-  - https://gitlab.com/mgyger/kicad-symbols/-/blob/pico/MCU_Module.kicad_sym
-  - https://gitlab.com/mgyger/kicad-footprints/-/tree/pico/Module.pretty
-
-## Pico W antenna radiation pattern resources:
-
-- Great teardown featured:
-  - https://electronupdate.blogspot.com/2022/07/raspberry-pi-pico-w-silicon-level.html
-    - https://youtu.be/dWJE1ALMlBw
-- Antenna info:
-  - https://www.antenna-theory.com/design/raspberry-pi-antenna.php
-    - https://youtu.be/MQ8gCsPoo6k
-  - https://www.tablix.org/~avian/blog/archives/2022/03/effect_of_ground_cutout_on_the_cm4_antenna/
-- Possible antenna radiation pattern:
-  - https://abracon.com/parametric/antennas/PRO-EB-592
-    - https://abracon.com/datasheets/PRO-EB-592.pdf
-  - https://abracon.com/parametric/antennas/PRO-EB-594
-    - https://abracon.com/datasheets/PRO-EB-594.pdf
-  - https://embeddedcomputing.com/technology/analog-and-power/power-semiconductors-wireless-charging/a-lesson-in-wireless-engineering-from-the-raspberry-pi
-  - https://antennatestlab.com/antenna-examples/raspberry-pi-model-3b-antenna-evaluation-gain-pattern
-
-&nbsp;
+Further reading available at the online repository linked below.
 
 
-***License***
-=============
 
-This work is licensed under the [*MIT No Attribution*](https://opensource.org/license/mit-0/)
-license, the text of which should be found in [`LICENSE.txt`](./LICENSE.txt)
-in the root directory of this project alongside this README.
+***License / Access***
+======================
 
-*The license applies to all relevant files contained within the directory it*
-*resides, including sub-directories, unless otherwise overridden by the*
-*presence of another LICENSE file, or license header within a file.*
+This work is made freely available under the [*MIT-0*][URL-MIT-0] license, rendered in [`LICENSE.txt`](./LICENSE.txt).  
+Although attribution is not required, sharing when you've made something with my work is really cool ❤✨
+
+*No additional/conflicting permissions were present in this repository at the time of release.*
+
+----------------------
+
+*Repository: <https://gitlab.com/recursivenomad/ki-lime-pi-pico/>*  
+*Releases: <https://gitlab.com/recursivenomad/ki-lime-pi-pico/-/releases/>*  
+*Contact: <recursivenomad@protonmail.com>*
+
+----------------------
+
+
+
+### Donations:
+
+*Accepted, but not expected*
+
+Monero (XMR) - `8Bhyeo232EVDiK7aRSzHGRC28RZ1H6FL55V6CVyCVtxdDRQXHk8btPU8Wr5G8K3AWgaK19JfYbshKfHWqc177jwtCtCSaz1`  
+Ether (ETH) - `0xD1b824f2Ec3D609e816B04A301124129602A5238`  
+Bitcoin (BTC) - `bc1qadq5kyuuc7etgu5ywlygnaepqhzgc2u7gxkze2`  
+Online payment: <https://donate.stripe.com/dR6dSU1PueevgKY4gs>
+
+
+
+
+
+
+[URL-MIT-0]: <https://opensource.org/license/mit-0/>
+
+[URL-KiCad-Forums-cdwilson]: <https://forum.kicad.info/t/21104>
+[URL-KiCad-Forums-mgyger]: <https://forum.kicad.info/t/35844/12>
+[URL-KLC]: <https://klc.kicad.org/>
+[URL-Official-Example]: <https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf#page=15>
