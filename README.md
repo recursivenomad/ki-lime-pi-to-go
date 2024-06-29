@@ -33,7 +33,7 @@
   *(below, I will use `<GIT-ROOT>/pcb/project-libraries/RaspberryPi_Pico`)*
 - For the latest release (KiCad 8.0+) without any history, from within your git repository call:
   - `git submodule add --name ki-lime-pi-pico --depth 1 https://github.com/recursivenomad/ki-lime-pi-to-go.git pcb/project-libraries/RaspberryPi_Pico`
-  - I also recommend this command, as passing this library's history to downstream users typically isn't necessary:  
+  - And since this library's history typically won't be needed by downstream users, I'd recommend:  
     `git config -f .gitmodules submodule.ki-lime-pi-pico.shallow true`
 - For a specific release (such as 1.1.0 for KiCad 7.0 support) with the complete submodule history, call:
   - `git submodule add --name ki-lime-pi-pico --branch 1.1.0 https://github.com/recursivenomad/ki-lime-pi-to-go.git pcb/project-libraries/RaspberryPi_Pico`  
