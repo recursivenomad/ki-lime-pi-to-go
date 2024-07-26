@@ -7,6 +7,9 @@
 
 
 
+
+
+
 ***Features***
 ==============
 
@@ -20,6 +23,9 @@
   - Ability to add individual schematic symbols for sockets, and a virtual Pico for the BOM and rendering
 - **Diverse 3D models** for surface-mount, through-hole, and socketed forms of the Pico, Pico H, Pico W, and Pico WH using photorealistic materials
 - Majority adherence to the [KiCad Library Conventions][URL-KLC] version 3.0.41
+
+
+
 
 
 
@@ -76,10 +82,16 @@ To use, simply add a symbol to your schematic as you would any other; symbols sh
 
 
 
+
+
+
 ***Further reading***
 =====================
 
 *Further reading available in the [source repository][URL-Repository].*
+
+
+
 
 
 
@@ -99,6 +111,9 @@ Although attribution is not required, sharing when you've made something with my
 *Contact: <recursivenomad@protonmail.com>*
 
 ----------------------
+
+
+
 
 
 
