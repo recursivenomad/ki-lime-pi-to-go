@@ -28,27 +28,47 @@
 
 > *If you're looking to use this library without submodules, you probably want the source repository [Ki-Lime Pi Pico][URL-Repository].*
 
+*These instructions assume a library directory of `./pcb/project-libraries/`*
+
 - Ensure you are running KiCad 7.0 or later
-- Identify the path where you want this library to exist in your project  
-  *(below, I will use `<GIT-ROOT>/pcb/project-libraries/ki-lime-pi-pico`)*
-- For the latest release (KiCad 8.0+) without any history, from within your git repository call:
-  - `git submodule add --name ki-lime-pi-pico --depth 1 https://github.com/recursivenomad/ki-lime-pi-to-go.git pcb/project-libraries/ki-lime-pi-pico`
-  - And since this library's history typically won't be needed by downstream users, I'd recommend:  
-    `git config -f .gitmodules submodule.ki-lime-pi-pico.shallow true`
-- For a specific release (such as 1.1.0 for KiCad 7.0 support) with the complete submodule history, call:
-  - `git submodule add --name ki-lime-pi-pico --branch 1.1.0 https://github.com/recursivenomad/ki-lime-pi-to-go.git pcb/project-libraries/ki-lime-pi-pico`  
-  *Note that `--branch` and `--depth` [cannot][URL-Git-Submodule-Limitation] be used simultaneously in `submodule add`*
-- Open the relevant KiCad project
-- Select `Preferences > Manage Footprint Libraries...`
-- Select the `Project Specific Libraries` tab
-- Click the folder icon in the lower left to `Add Existing`
+- Add the submodule to your project:
+  > <details> <summary> For the latest release (KiCad 8.0+), call... </summary>
+  > 
+  > ```bash
+  > mkdir -p pcb/project-libraries/ && cd $_
+  > git submodule add --name ki-lime-pi-pico https://github.com/recursivenomad/ki-lime-pi-to-go.git ki-lime-pi-pico
+  > cd ../..
+  > ```
+  >
+  > </details>
+  >
+  > <details> <summary> For a specific release (such as 1.1.0 for KiCad 7.0), call... </summary>
+  >
+  > ```bash
+  > mkdir -p pcb/project-libraries/ && cd $_
+  > git submodule add --name ki-lime-pi-pico --branch 1.1.0 https://github.com/recursivenomad/ki-lime-pi-to-go.git ki-lime-pi-pico
+  > cd ../..
+  > ```
+  >
+  > </details>
+  >
+  > <details> <summary> For the smallest clone of the latest release (with no history), call... </summary>
+  > 
+  > ```bash
+  > mkdir -p pcb/project-libraries/ && cd $_
+  > git submodule add --name ki-lime-pi-pico --depth 1 https://github.com/recursivenomad/ki-lime-pi-to-go.git ki-lime-pi-pico
+  > cd ../..
+  > # Uncomment below to also suggest a shallow clone to downstream users
+  > # git config -f .gitmodules submodule.ki-lime-pi-pico.shallow true
+  > ```
+  >
+  > </details>
+- In your KiCad project, open `Preferences` > `Manage Footprint Libraries...`
+- Select the **Project Specific Libraries** tab and click the folder icon to *Add Existing*
 - Navigate to and select `.../ki-lime-pi-pico/Module_RaspberryPi_Pico.pretty/`
-- Click `OK`
-- Select `Preferences > Manage Symbol Libraries...`
-- Select the `Project Specific Libraries` tab
-- Click the folder icon in the lower left to `Add existing library to table`
+- Then open `Preferences` > `Manage Symbol Libraries...`
+- Select the **Project Specific Libraries** tab and cick the folder icon to *Add existing library to table*
 - Navigate to and select `.../ki-lime-pi-pico/MCU_Module_RaspberryPi_Pico.kicad_sym`
-- Click `OK`
 
 To use, simply add a symbol to your schematic as you would any other; symbols should be located under the section `MCU_Module_RaspberryPi_Pico`, and footprints under `Module_RaspberryPi_Pico`.
 
@@ -102,8 +122,4 @@ Although attribution is not required, sharing when you've made something with my
 
 [URL-Repository]: <https://gitlab.com/recursivenomad/ki-lime-pi-pico/>
 
-[URL-Git-Submodule-Limitation]: <https://lore.kernel.org/git/1410455473-2367-1-git-send-email-cole.minnaar@gmail.com/>
-[URL-KiCad-Forums-cdwilson]: <https://forum.kicad.info/t/21104>
-[URL-KiCad-Forums-mgyger]: <https://forum.kicad.info/t/35844/12>
 [URL-KLC]: <https://klc.kicad.org/>
-[URL-Official-Example]: <https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf#page=15>
