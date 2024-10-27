@@ -2024,7 +2024,7 @@
 				(alternate "UART1_CTS" input line)
 				(alternate "USB_OVCUR_DET" input line)
 			)
-			(pin input clock
+			(pin input line
 				(at -22.86 30.48 0)
 				(length 3.81)
 				(name "SWCLK"
@@ -2176,6 +2176,14 @@
 				)
 				(fill
 					(type none)
+				)
+			)
+			(text "100k"
+				(at 7.3025 -2.54 0)
+				(effects
+					(font
+						(size 0.635 0.635)
+					)
 				)
 			)
 			(text "VSYS"
@@ -3657,7 +3665,7 @@
 					(type none)
 				)
 			)
-			(pin input clock
+			(pin input line
 				(at -22.86 30.48 0)
 				(length 3.81)
 				(name "SWCLK"
@@ -4723,7 +4731,7 @@
 				(alternate "UART1_CTS" input line)
 				(alternate "USB_OVCUR_DET" input line)
 			)
-			(pin input clock
+			(pin input line
 				(at -22.86 30.48 0)
 				(length 3.81)
 				(name "SWCLK"
